@@ -19,7 +19,7 @@ namespace api.Data
             InitializeDatabase();
         }
 
-        private void InitializeDatabase(){
+        private void InitializeDatabase(){            
             _dBconnection.Execute(@"
                 CREATE TABLE IF NOT EXISTS Products (
                     Id INTEGER PRIMARY KEY AUTOINCREMENT,

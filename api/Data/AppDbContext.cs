@@ -16,7 +16,7 @@ namespace api.Data
 
         public DbSet<Product> Products { get; set;}
 
-        protected override void OnModelCreating(ModelBuilder modelBuilder){
+        protected override void OnModelCreating(ModelBuilder modelBuilder){            
             modelBuilder.Entity<Product>().HasData(
                 new Product {Id = 1, Name = "Product 1", Description = "Product 1 description", Price = 10.99M, Category = "Category 1"},
                 new Product {Id = 2, Name = "Product 2", Description = "Product 2 description", Price = 20.99M, Category = "Category 2"}

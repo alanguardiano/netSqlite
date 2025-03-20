@@ -22,8 +22,12 @@ var app = builder.Build();
 
 using(var scope = app.Services.CreateScope())
 {
+    //cria pelo entity framework
     var dbContext = scope.ServiceProvider.GetRequiredService<AppDbContext>();
-    dbContext.Database.EnsureCreated();
+    //dbContext.Database.EnsureCreated();
+
+    //cria pelo DAPPER
+    var dapperContext = scope.ServiceProvider.GetRequiredService<AppDbContextWithDapper>();
 }
 
 app.UseHttpsRedirection();
