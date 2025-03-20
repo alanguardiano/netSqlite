@@ -68,3 +68,4 @@ C:\Users\alan.souza\Desktop\REPOSITORIOS\estudos\dotnet\sqlite\api\bin\Debug\net
 C:\Users\alan.souza\Desktop\REPOSITORIOS\estudos\dotnet\sqlite\api\obj\Debug\net9.0\api.csproj.AssemblyReference.cache
 C:\Users\alan.souza\Desktop\REPOSITORIOS\estudos\dotnet\sqlite\api\obj\Debug\net9.0\api.sourcelink.json
 C:\Users\alan.souza\Desktop\REPOSITORIOS\estudos\dotnet\sqlite\api\obj\Debug\net9.0\api.csproj.Up2Date
+C:\Users\alan.souza\Desktop\REPOSITORIOS\estudos\dotnet\sqlite\api\bin\Debug\net9.0\Dapper.dll

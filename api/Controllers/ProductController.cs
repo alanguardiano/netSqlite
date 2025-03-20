@@ -14,10 +14,12 @@ namespace api.Controllers
     public class ProductController : ControllerBase
     {
         private readonly AppDbContext _dbContext;
+        private readonly AppDbContextWithDapper _dbDapperContext;
 
-        public ProductController(AppDbContext dbContext)
+        public ProductController(AppDbContext dbContext, AppDbContextWithDapper dbDapper)
         {
             _dbContext = dbContext;
+            _dbDapperContext = dbDapper;
         }
 
         [HttpGet]
@@ -28,8 +30,15 @@ namespace api.Controllers
 
         [HttpGet]
         [Route("EF/GetAllProducts")]
-        public ActionResult<List<Product>> GetAllProducts(){
+        public ActionResult<List<Product>> GetEAllProducts(){
             var products = _dbContext.Products.ToList();
+            return Ok(products);
+        }
+
+        [HttpGet]
+        [Route("DP/GetAllProducts")]
+        public ActionResult<List<Product>> GetAllProducts(){
+            var products = _dbDapperContext.GetAllProducts().ToList();
             return Ok(products);
         }
     }

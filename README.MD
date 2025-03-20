@@ -20,3 +20,5 @@ code .
 dotnet add package Microsoft.Data.Sqlite
 dotnet add package Microsoft.EntityFrameworkCore.Sqlite
 
+# adicionar o micro orm dapper
+dotnet add package Dapper

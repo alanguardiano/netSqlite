@@ -1,6 +1,7 @@
 using api.Data;
 using Microsoft.Data.Sqlite;
 using Microsoft.EntityFrameworkCore;
+using System.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,6 +11,10 @@ builder.Services.AddControllers();
 
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+builder.Services.AddScoped<IDbConnection>(_ =>
+    new SqliteConnection(builder.Configuration.GetConnectionString("DefaultConnection")));
+builder.Services.AddScoped<AppDbContextWithDapper>();
 
 var app = builder.Build();
 
