@@ -16,3 +16,7 @@ sln add ./api
 cd api
 code .
 
+# adicionar o sqlite e entity framework
+dotnet add package Microsoft.Data.Sqlite
+dotnet add package Microsoft.EntityFrameworkCore.Sqlite
+
